@@ -1,0 +1,32 @@
+startup_message off
+
+## current command name as window name
+shelltitle "$ |bash"
+
+#hardstatus alwayslastline "%-w%{= ck}%n %t%{-}%+w %=%H [%Y-%m-%d %02c:%s]"
+hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y %m/%d %C:%s%a"
+hardstatus off
+
+escape ^z^z
+
+termcap * 'G0:S0=\E(%.:E0=\E(B:TY=iso2022'
+termcapinfo xterm* ti@:te@
+autodetach on
+defflow off
+crlf off
+vbell off
+vbell_msg "Bell"
+
+defutf8 on
+defkanji utf-8
+encoding utf-8 utf-8
+defencoding utf-8
+
+bind o focus
+bind k kill
+bind s split
+
+screen 0
+scrollback 4000
+screen 1
+scrollback 4000
