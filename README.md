@@ -37,7 +37,8 @@ Extract this project
 ----------------------------------------
 
     git pull https://github.com/shtaxxx/commandline_settings.git
-
+    mv commandline_settings settings
+    
 
 Make symbolic links by using setup_linux.sh
 ----------------------------------------
