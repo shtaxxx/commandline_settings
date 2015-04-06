@@ -1,9 +1,9 @@
 (cond ((eq window-system 'x)
 	   (progn 
-		 (set-default-font "TakaoGothic-11")
+		 (set-default-font "Monospace-12")
 		 (set-fontset-font (frame-parameter nil 'font)
-						   'japanese-jisx0208
-						   '("TakaoGothic-11" . "unicode-bmp"))
+                       'japanese-jisx0208
+                       '("TakaoGothic-12" . "unicode-bmp"))
 		 (tool-bar-mode nil)
 		 (set-scroll-bar-mode'right)
 		 (setq initial-frame-alist '((width . 150) (height . 40) (top . 0) (left . 0)))
@@ -18,5 +18,5 @@
 ; Mozc
 (when (locate-library "mozc")
   (require 'mozc)
-  (setq default-input-method "japanese-mozc")
-)
+  (setq default-input-method "japanese-mozc"))
+
