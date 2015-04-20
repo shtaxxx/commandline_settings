@@ -4,33 +4,42 @@
 (package-initialize)
 
 (require 'cl)
+
+;; for old emacs versions
 (defvar installing-package-list
   '(
-    auto-complete
     exec-path-from-shell
-    anzu
-    expand-region
-    multiple-cursors
-    smartrep
+    auto-complete
     gtags
-    flymake
-    flymake-cursor
-    markdown-mode
-    markdown-mode+
-    python-mode
-    epc
-    python-environment
-    jedi
-    jinja2-mode
-    go-mode
-    go-autocomplete
-    scala-mode2
-    haskell-mode
     ))
 
+;; for emacs 24 or later
+(when (>= emacs-major-version 24)
+  (setq installing-package-list
+        (append installing-package-list
+                '(
+                  flymake
+                  flymake-cursor
+                  anzu
+                  expand-region
+                  multiple-cursors
+                  smartrep
+                  markdown-mode
+                  markdown-mode+
+                  python-mode
+                  python-environment
+                  epc
+                  jedi
+                  go-mode
+                  go-autocomplete
+                  scala-mode2
+                  haskell-mode
+                  jinja2-mode
+                  ))))
+
 (let ((not-installed (loop for x in installing-package-list
-			   when (not (package-installed-p x))
-			   collect x)))
+                           when (not (package-installed-p x))
+                           collect x)))
   (when not-installed
     (package-refresh-contents)
     (dolist (pkg not-installed)

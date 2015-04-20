@@ -68,7 +68,7 @@
 ;;
 ;; * Download.  Fetching the package from ELPA.
 ;; * Install.  Untar the package, or write the .el file, into
-;;   ~/.emacs.d/elpa/ directory.
+;;   ~/.emacs.d/elpa23/ directory.
 ;; * Byte compile.  Currently this phase is done during install,
 ;;   but we may change this.
 ;; * Activate.  Evaluate the autoloads for the package to make it
@@ -250,7 +250,7 @@ but have extra entries: one which is 'tar for tar packages and
 the archive from which it came.")
 (put 'package-archive-contents 'risky-local-variable t)
 
-(defcustom package-user-dir (locate-user-emacs-file "elpa")
+(defcustom package-user-dir (locate-user-emacs-file "elpa23")
   "Directory containing the user's Emacs Lisp packages.
 The directory name should be absolute.
 Apart from this directory, Emacs also looks for system-wide
@@ -261,12 +261,12 @@ packages in `package-directory-list'."
   :version "24.1")
 
 (defcustom package-directory-list
-  ;; Defaults are subdirs named "elpa" in the site-lisp dirs.
+  ;; Defaults are subdirs named "elpa23" in the site-lisp dirs.
   (let (result)
     (dolist (f load-path)
       (and (stringp f)
 	   (equal (file-name-nondirectory f) "site-lisp")
-	   (push (expand-file-name "elpa" f) result)))
+	   (push (expand-file-name "elpa23" f) result)))
     (nreverse result))
   "List of additional directories containing Emacs Lisp packages.
 Each directory name should be absolute.

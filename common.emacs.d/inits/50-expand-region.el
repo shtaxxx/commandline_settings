@@ -1,6 +1,6 @@
 (require 'expand-region)
-(global-set-key (kbd "C-o") 'er/expand-region)
-(global-set-key (kbd "C-M-o") 'er/contract-region)
+(global-set-key (kbd "C--") 'er/expand-region)
+(global-set-key (kbd "C-M--") 'er/contract-region)
 
 (defadvice isearch-mode (around
                          isearch-mode-default-string

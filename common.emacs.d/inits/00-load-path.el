@@ -4,7 +4,7 @@
   (setq load-path (append load-path (list (expand-file-name my-path)))))
 (prepend-path "~/.emacs.d/elisp")
 
-;; load-path for emacs23
+;; load-path for emacs23 or older
 (cond
- ((equal emacs-major-version 23)
+ ((< emacs-major-version 24)
   (prepend-path "~/.emacs.d/elisp23")))
