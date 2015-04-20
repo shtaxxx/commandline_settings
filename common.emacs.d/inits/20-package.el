@@ -7,6 +7,11 @@
 (defvar installing-package-list
   '(
     auto-complete
+    exec-path-from-shell
+    anzu
+    expand-region
+    multiple-cursors
+    smartrep
     gtags
     flymake
     flymake-cursor

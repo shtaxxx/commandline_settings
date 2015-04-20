@@ -4,13 +4,13 @@
 ;;   go get -u github.com/nsf/gocode
 ;;   go get code.google.com/p/go.tools/cmd/goimports
 ;; exec-path should include a path to .go/bin.
-;; So DO NOT launch an emacs from App icon, DO launch an emacs from terminal (shell).
+;; Use exec-path-from-shell for this.
 
 (autoload 'go-mode "go-mode" nil t)
 (eval-after-load "go-mode" '(progn (require 'go-autocomplete)))
 (add-hook 'go-mode-hook
           '(lambda()
-             (setq gofmt-command "goimports")
+;             (setq gofmt-command "goimports")
              (add-hook 'before-save-hook 'gofmt-before-save)
              (setq c-basic-offset 4)
              (setq indent-tabs-mode t)

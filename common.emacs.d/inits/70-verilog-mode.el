@@ -19,3 +19,5 @@
  verilog-auto-newline             nil
  verilog-auto-endcomments         nil
  )
+
+(global-set-key (kbd "C-;") 'er/expand-region)

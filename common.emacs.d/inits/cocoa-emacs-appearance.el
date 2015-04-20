@@ -1,10 +1,9 @@
 ;; Window Size, Color
 (setq hostname (system-name))
-(cond 
- ((equal hostname "KAREN")
-  (setq initial-frame-alist '((width . 183) (height . 47) (top . 0) (left . 0))))
+(cond
  ((equal hostname "LORRAINE")
-  (setq initial-frame-alist '((width . 228) (height . 66) (top . 0) (left . 0)))))
+  (setq initial-frame-alist '((width . 198) (height . 53) (top . 0) (left . 0))))
+ )
 
 (set-background-color "Black")
 (set-foreground-color "LightGray")
@@ -20,21 +19,13 @@
 ;(menu-bar-mode -1)
 
 ;; font
-;; Menlo-14, Hiragino-Kakugo-16
-;(create-fontset-from-ascii-font "Menlo-14:weight=normal:slant=normal" nil "menlokakugo")
-;(set-fontset-font "fontset-menlokakugo"
-;                  'unicode
-;                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
-;                  nil
-;                  'append)
-;(add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
-
 ;; Monaco-14, Osaka-16
 ;; Monaco-12, Osaka-14
-(create-fontset-from-ascii-font "Monaco-12:weight=normal:slant=normal" nil "monacoosaka")
+;; Monaco-10, Osaka-12
+(create-fontset-from-ascii-font "Monaco-14:weight=normal:slant=normal" nil "monacoosaka")
 (set-fontset-font "fontset-monacoosaka"
                   'unicode
-                  (font-spec :family "Osaka" :size 14)
+                  (font-spec :family "Osaka" :size 16)
                   nil
                   'append)
 (add-to-list 'default-frame-alist '(font . "fontset-monacoosaka"))

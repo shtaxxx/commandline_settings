@@ -9,7 +9,7 @@
 ;;    (setq server-done-hook '(lambda () (kill-buffer buffer))))
 ;;
 ;;(if window-system
-;;    (global-set-key "\C-x#"
+;;    (global-set-key (kbd "C-x #")
 ;;                    '(lambda ()
 ;;                       (interactive)
 ;;                       (server-edit)
