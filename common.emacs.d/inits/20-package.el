@@ -9,8 +9,6 @@
 (defvar installing-package-list
   '(
     exec-path-from-shell
-    auto-complete
-    gtags
     ))
 
 ;; for emacs 24 or later
@@ -18,6 +16,8 @@
   (setq installing-package-list
         (append installing-package-list
                 '(
+                  auto-complete
+                  gtags
                   flymake
                   flymake-cursor
                   anzu
@@ -35,6 +35,7 @@
                   scala-mode2
                   haskell-mode
                   jinja2-mode
+                  rainbow-delimiters
                   ))))
 
 (let ((not-installed (loop for x in installing-package-list
