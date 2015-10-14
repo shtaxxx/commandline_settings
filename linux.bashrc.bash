@@ -11,7 +11,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # console style
-if [ $TERM = 'screen' ]; then
+if [ "`echo $TERM | grep 'screen'`" != "" ]; then
     ## Current command name as window name
     #export PS1='\[\033k\033\\\][\u@\h \W]\$ '
     #export PS1='\[\033k\033\\\]\u@\h:\W\$ '
@@ -34,11 +34,8 @@ if [ "`stty | grep erase`" = "" ] ; then
     stty erase 
 fi
 
-if [ -f ~/.lang/langrc.sh ]; then
-    source ~/.lang/langrc.sh
-elif [ -f /etc/sysconfig/lang ] ; then
-    LANG=`cat /etc/sysconfig/lang` ; export LANG
-fi
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 if [ `uname` = "Linux" ]; then
     alias ls='ls -NF --show-control-chars'
