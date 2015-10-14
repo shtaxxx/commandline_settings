@@ -36,6 +36,7 @@
                   haskell-mode
                   jinja2-mode
                   rainbow-delimiters
+                  powerline
                   ))))
 
 (let ((not-installed (loop for x in installing-package-list
