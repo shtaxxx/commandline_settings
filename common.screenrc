@@ -26,7 +26,6 @@ bind o focus
 bind k kill
 bind s split
 
-screen 0
-scrollback 4000
+defscrollback 1000000
 screen 1
-scrollback 4000
+screen 0
