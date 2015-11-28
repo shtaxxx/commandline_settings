@@ -7,6 +7,11 @@ if ( -f /etc/csh.cshrc ) then
     source /etc/csh.cshrc
 endif
 
+stty sane
+if ( "`stty | grep erase`" == "" ) then
+    stty erase 
+endif
+
 # console style
 if ( $TERM == 'screen' ) then
     set echo_style=both
@@ -16,17 +21,14 @@ else
     set prompt="%n@%m:%c1$ "
 endif
 
-stty sane
-if ( "`stty | grep erase`" == "" ) then
-    stty erase 
-endif
+setenv LANG en_US.UTF-8
+setenv LC_ALL en_US.UTF-8
 
-if ( -f ~/.lang/langrc.sh ) then
-    source ~/.lang/langrc.sh
-else if ( -f /etc/sysconfig/lang ) then
-    setenv LANG `cat /etc/sysconfig/lang`
-endif
+set autolist
+set autocorrect 
+set savehist=10000
 
+# ls color
 if ( `uname` == "Linux" ) then
     alias ls 'ls -NF --show-control-chars'
     # if you use color ls, comment out above line and uncomment below 2 lines.
@@ -37,36 +39,26 @@ else if ( `uname` == 'FreeBSD' ) then
     alias ls 'ls -G'
 endif
 
-set autolist
-set autocorrect 
-set savehist=1000
-
 alias rm 'rm -i'
 alias cp 'cp -i'
 alias mv 'mv -i'
 alias ll 'ls -l'
 alias la 'ls -aF'
 alias sc 'screen -D -RR'
-
-alias Emacs '/usr/bin/emacs'
-alias emacs '/usr/bin/emacs -nw'
 alias open 'xdg-open'
 
-setenv EDITOR 'emacs -nw'
+setenv EDITOR 'vi'
+setenv SVN_SSH 'ssh -q'
+
+# PATH
 set path=(\
         ~/script \
         $path \
         )
-        
-# golang
-if (-x "`which go`") then
-    setenv GOROOT `go env GOROOT`
-    setenv GOPATH ~/.go
-    set path= ( \
-        $GOROOT/bin \
-        $GOPATH/bin \
-        $path \
-        )
+
+# machine specific .cshrc
+if ( -f .`hostname`/dot.cshrc.csh ) then
+    source .`hostname`/dot.cshrc.csh
 endif
 
 # ssh-agent
@@ -95,7 +87,3 @@ endif
 
 alias sshkey 'eval `cat ${SSH_AGENT_FILE}`'
 alias sshrm 'rm -f ${SSH_AGENT_FILE}'
-
-# ssh 
-alias machine1 'ssh -l yourname 192.168.0.11'
-alias machine1pf 'ssh -l yourname -p 2211 localhost'

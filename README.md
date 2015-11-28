@@ -25,7 +25,7 @@ Procedure
 Backup old setting files
 ----------------------------------------
 
-If there are any old settings files, such as .bashrc, .bash_profile, .cshrc, and etc., rename them.
+If there are any old settings files, such as .bashrc, .bash_profile, .cshrc, and etc., rename or delete them.
 
     mv .bash_profile .bash_profile.old
     mv .bashrc .bashrc.old
@@ -82,7 +82,7 @@ Then set the permission of .ssh/id_rsa to 600
 Source .bashrc/.cshrc
 ----------------------------------------
 
-First check your shell (probably you are using tcsh)
+First check your shell.
 
     echo $SHELL
 
