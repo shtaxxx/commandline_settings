@@ -15,7 +15,7 @@
              (jedi:setup)
              (define-key jedi-mode-map (kbd "M-TAB") 'jedi:complete)
              (setq jedi:complete-on-dot t)
-             (setq jedi:environment-root "env")
+             (setq jedi:environment-root "jedi")
              (setq jedi:environment-virtualenv
                    (append python-environment-virtualenv
                            '("--python" "python3")))))
