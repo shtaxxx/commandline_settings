@@ -2,7 +2,7 @@
 ;(global-set-key (kbd "C-c") 'ispell-word)
 
 (setq hostname (system-name))
-(setq ispell-program-name "/usr/local/bin/aspell")
+(setq ispell-program-name "aspell")
 (autoload 'ispell-word "ispell" "Check the spelling of word in buffer." t)
 (autoload 'ispell-region "ispell" "Check the spelling of region." t)
 (autoload 'ispell-buffer "ispell" "Check the spelling of buffer." t)

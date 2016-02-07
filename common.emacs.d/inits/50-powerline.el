@@ -50,11 +50,10 @@ static char * arrow_right[] = {
 \"          ..\",
 \"           .\"};"  color2 color1))
 
-
-(defconst color1 "#FF6699")
-(defconst color3 "#CDC0B0")
-(defconst color2 "#FF0066")
-(defconst color4 "#CDC0B0")
+(defconst color1 "#cd00cd")
+(defconst color2 "#ff00ff")
+(defconst color3 "#7f7f7f")
+(defconst color4 "#7f7f7f")
 
 (defvar arrow-right-0 (create-image (arrow-right-xpm "None" color1) 'xpm t :ascent 'center))
 (defvar arrow-right-1 (create-image (arrow-right-xpm color1 color2) 'xpm t :ascent 'center))

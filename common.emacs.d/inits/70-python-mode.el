@@ -1,9 +1,4 @@
 ;; python-mode with jedi
-(add-to-list 'load-path "~/.emacs.d/site-lisp/jedi/emacs-deferred")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/jedi/emacs-epc")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/jedi/emacs-ctable")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/jedi/emacs-jedi")
-
 (autoload 'python "python" nil t)
 (autoload 'jedi "jedi" "Jedi for python" t)
 

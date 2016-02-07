@@ -2,7 +2,7 @@
 (setq hostname (system-name))
 (cond
  ((equal hostname "LORRAINE")
-  (setq initial-frame-alist '((width . 198) (height . 53) (top . 0) (left . 0))))
+  (setq initial-frame-alist '((width . 198) (height . 52) (top . 0) (left . 0))))
  )
 
 (set-background-color "Black")
@@ -16,7 +16,7 @@
 
 ;; No tool-bar and menu-bar
 (tool-bar-mode -1)
-;(menu-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; font
 ;; Monaco-14, Osaka-16
@@ -29,6 +29,9 @@
                   nil
                   'append)
 (add-to-list 'default-frame-alist '(font . "fontset-monacoosaka"))
+
+;; Meta key
+(setq mac-option-modifier 'meta)
 
 ;; Wheel mouse
 (defun down-slightly () (interactive) (scroll-down 5))
