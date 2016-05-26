@@ -49,7 +49,8 @@
                   go-mode
                   go-autocomplete
                   cuda-mode
-                  scala-mode2
+                  opencl-mode
+                  scala-mode
                   haskell-mode
                   jinja2-mode
                   yatex
