@@ -1,5 +1,5 @@
 # Please execute this script at ~/
-ROOT=~/settings
+ROOT=~/.settings
 ln -s ${ROOT}/common.bash_profile.bash .bash_profile
 ln -s ${ROOT}/linux.bashrc.bash .bashrc
 ln -s ${ROOT}/linux.cshrc.csh .cshrc

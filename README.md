@@ -5,7 +5,7 @@ A Toolkit for Setting Up Command-line Environments on Linux/BSD/Mac.
 
 Copyright (C) 2014, Shinya Takamaeda-Yamazaki
 
-E-mail: shinya\_at\_is.naist.jp
+E-mail: takamaeda\_at\_ist.hokudai.ac.jp
 
 
 What's This?
@@ -37,7 +37,7 @@ Extract this project
 ----------------------------------------
 
     git pull https://github.com/shtaxxx/commandline_settings.git
-    mv commandline_settings settings
+    mv commandline_settings .settings
     
 
 Make symbolic links by using setup_linux.sh
@@ -56,9 +56,7 @@ Please copy it from settings to ~/ and execute it.
 Setup ssh public key authorization and ssh-agent
 ----------------------------------------
 
-ssh is a fundamental command to to access to linux/BSD servers in our labs.
-
-Especially, to access them outside NAIST, ssh public key authorization is essential.
+ssh is a fundamental command to to access to linux/BSD servers.
 
 Additionally, by using ssh-agent, you can skip an input of your password for every authorization, so that you are automatically authorized.
 

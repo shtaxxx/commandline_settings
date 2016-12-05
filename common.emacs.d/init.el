@@ -14,6 +14,11 @@
  ((< emacs-major-version 24)
   (prepend-path "~/.emacs.d/elisp23")))
 
+;; custom-set-variables
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))
+
 ;; package
 (require 'cl)
 (require 'package)
@@ -46,6 +51,7 @@
                   python-mode
                   python-environment
                   jedi
+                  py-autopep8
                   go-mode
                   go-autocomplete
                   cuda-mode
