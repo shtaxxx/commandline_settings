@@ -1,9 +1,11 @@
-;; Window Size, Color
+;; Set hostname
 (setq hostname (system-name))
-(cond
- ((equal hostname "LORRAINE")
-  (setq initial-frame-alist '((width . 198) (height . 52) (top . 0) (left . 0))))
- )
+
+;; Window Size, Color
+;; Fontset
+;;   Monaco-14, Osaka-16
+;;   Monaco-12, Osaka-14
+;;   Monaco-10, Osaka-12
 
 (set-background-color "Black")
 (set-foreground-color "LightGray")
@@ -11,24 +13,23 @@
 (set-frame-parameter nil 'alpha 90)
 (set-face-background 'region "LightSteelBlue1")
 
+(cond
+ (t ;; default
+  (create-fontset-from-ascii-font "Monaco-14:weight=normal:slant=normal" nil "monacoosaka")
+  (set-fontset-font "fontset-monacoosaka"
+                    'unicode
+                    (font-spec :family "Osaka" :size 16)
+                    nil
+                    'append)))
+
+(add-to-list 'default-frame-alist '(font . "fontset-monacoosaka"))
+
 ;; Do not open a new window
 (setq ns-pop-up-frames nil)
 
 ;; No tool-bar and menu-bar
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-
-;; font
-;; Monaco-14, Osaka-16
-;; Monaco-12, Osaka-14
-;; Monaco-10, Osaka-12
-(create-fontset-from-ascii-font "Monaco-14:weight=normal:slant=normal" nil "monacoosaka")
-(set-fontset-font "fontset-monacoosaka"
-                  'unicode
-                  (font-spec :family "Osaka" :size 16)
-                  nil
-                  'append)
-(add-to-list 'default-frame-alist '(font . "fontset-monacoosaka"))
+(tool-bar-mode 0)
+(menu-bar-mode 0)
 
 ;; Meta key
 (setq mac-option-modifier 'meta)

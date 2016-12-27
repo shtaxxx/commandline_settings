@@ -23,8 +23,6 @@
 (require 'cl)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-
 (package-initialize)
 
 ;; packages for emacs 23 and older
@@ -39,29 +37,29 @@
   (setq installing-package-list
         (append installing-package-list
                 '(
-                  auto-complete
-                  flymake
-                  flymake-cursor
                   anzu
                   expand-region
                   multiple-cursors
+                  powerline
+                  rainbow-delimiters
                   smartrep
-                  markdown-mode
-                  markdown-mode+
-                  python-mode
+                  auto-complete
+                  flycheck
+                  ggtags
                   python-environment
                   jedi
                   py-autopep8
                   go-mode
                   go-autocomplete
+                  rust-mode
+                  flycheck-rust
+                  ac-racer
                   cuda-mode
                   opencl-mode
                   scala-mode
-                  haskell-mode
                   jinja2-mode
+                  markdown-mode
                   yatex
-                  rainbow-delimiters
-                  powerline
                   ))))
 
 ;; automatic install 

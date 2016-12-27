@@ -16,6 +16,7 @@
 ;; Use Japanese
 (eval-after-load "ispell"
   '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+
 ;; Use latex file
 (setq ispell-filter-hook-args '("-w"))
 (setq TeX-mode-hook

@@ -1,6 +1,5 @@
-;; python-mode with jedi
-(autoload 'python "python" nil t)
-(autoload 'jedi "jedi" "Jedi for python" t)
+;(autoload 'python-mode "python-mode" nil t)
+(autoload 'jedi "jedi" nil t)
 
 (add-hook 'python-mode-hook
           '(lambda ()
@@ -10,15 +9,14 @@
              (setq indent-level 4)
              (setq python-indent 4)
              (setq tab-width 4)
-             ;; jedi
-             (setq jedi:setup-keys t)
+             ; jedi
              (jedi:setup)
-             (define-key jedi-mode-map (kbd "M-TAB") 'jedi:complete)
+             (setq jedi:setup-keys t)
              (setq jedi:complete-on-dot t)
              (setq jedi:environment-root "jedi")
              (setq jedi:environment-virtualenv
-                   (append python-environment-virtualenv
-                           '("--python" "python3")))))
+                   (append python-environment-virtualenv '("--python" "python3")))
+             (define-key jedi-mode-map (kbd "M-TAB") 'jedi:complete)))
 
 (eval-after-load "jedi"
   '(progn

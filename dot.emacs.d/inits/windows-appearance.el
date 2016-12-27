@@ -5,9 +5,8 @@
 (set-frame-parameter nil 'alpha 92)
 (set-face-background 'region "LightSteelBlue1")
 (setq default-frame-alist initial-frame-alist)
-;(tool-bar-mode nil)
-(tool-bar-mode -1)
-;(menu-bar-mode -1)
+(tool-bar-mode 0)
+(menu-bar-mode 0)
 
 ;; Wheel mouse
 (defun down-slightly () (interactive) (scroll-down 5))

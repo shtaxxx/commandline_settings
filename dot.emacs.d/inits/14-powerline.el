@@ -81,7 +81,7 @@ static char * arrow_right[] = {
                                (propertize " %p " 'face 'mode-line-color-2)))
                '(:eval (concat (propertize " " 'display arrow-left-1)
                                (propertize "%4l:%2c  " 'face 'mode-line-color-1)))
-                 ))
+               ))
 
 (make-face 'mode-line-color-1)
 (set-face-attribute 'mode-line-color-1 nil

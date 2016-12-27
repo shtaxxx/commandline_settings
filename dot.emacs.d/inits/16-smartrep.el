@@ -1,6 +1,3 @@
-(require 'multiple-cursors)
-(global-set-key (kbd "<C-M-return>") 'mc/edit-lines)
-
 (require 'smartrep)
 (global-unset-key "\C-o")
 (smartrep-define-key
