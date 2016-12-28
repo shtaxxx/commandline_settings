@@ -46,6 +46,8 @@
                   auto-complete
                   flycheck
                   ggtags
+                  google-c-style
+                  auto-complete-clang-async
                   python-environment
                   jedi
                   py-autopep8
