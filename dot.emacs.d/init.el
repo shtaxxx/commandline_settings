@@ -54,7 +54,7 @@
                   go-mode
                   go-autocomplete
                   rust-mode
-                  flycheck-rust
+                  rustfmt
                   ac-racer
                   cuda-mode
                   opencl-mode
