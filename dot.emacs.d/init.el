@@ -54,7 +54,6 @@
                   go-mode
                   go-autocomplete
                   rust-mode
-                  rustfmt
                   ac-racer
                   cuda-mode
                   opencl-mode
