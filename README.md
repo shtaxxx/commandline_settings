@@ -39,7 +39,7 @@ Extract this project
 
     cd
     git clone https://github.com/shtaxxx/commandline_settings.git
-    mv commandline_settings .settings
+    mv commandline_settings .dotfiles
     
 
 Make symbolic links by using setup.sh
@@ -50,7 +50,7 @@ It makes setting files of .bashrc, .screenrc, and .emacs.d on your home director
 Please copy it from settings to ~/ and execute it.
 
     cd
-    cp ~/.settings/setup.sh ~/
+    cp ~/.dotfiles/setup.sh ~/
     sh setup.sh
     rm -f setup.sh
 
@@ -65,7 +65,7 @@ Additionally, by using ssh-agent, you can skip an input of your password for eve
 If you DON'T have a valid ssh public and secret keys, please execute the next command as below.
 
     cd
-    cp ~/.settings/ssh_setup.sh ~/
+    cp ~/.dotfiles/ssh_setup.sh ~/
     sh ssh_setup.sh
     rm -f ssh_setup.sh
 

@@ -1,5 +1,5 @@
 # Please execute this script at ~/
-ROOT=~/.settings
+ROOT=~/.dotfiles
 ln -s ${ROOT}/dot.bash_profile.bash .bash_profile
 ln -s ${ROOT}/dot.bashrc.bash .bashrc
 ln -s ${ROOT}/dot.bash_sessions_disable .bash_sessions_disable
