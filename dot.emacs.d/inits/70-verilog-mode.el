@@ -19,23 +19,24 @@
  )
 
 ;; flymake
-;(add-hook 'verilog-mode-hook (lambda () (flymake-mode t)))
+;(defun my-verilog-mode-hook ()
+;  (flymake-mode t))
+;(add-hook 'verilog-mode-hook 'my-verilog-mode-hook)
 ;
-;(eval-after-load "flymake"
-;  '(progn
-;     (defadvice flymake-post-syntax-check 
-;         (before flymake-force-check-was-interrupted)
-;       (setq flymake-check-was-interrupted t))
-;     (ad-activate 'flymake-post-syntax-check)
+;(with-eval-after-load "flymake"
+;  (defadvice flymake-post-syntax-check 
+;      (before flymake-force-check-was-interrupted)
+;    (setq flymake-check-was-interrupted t))
+;  (ad-activate 'flymake-post-syntax-check)
 ;
-;     (defun flymake-verilog-init ()
-;       (let* ((temp (flymake-init-create-temp-buffer-copy 'flymake-create-temp-inplace))
-;              (local (file-relative-name temp (file-name-directory buffer-file-name))))
-;         (list "iverilog" (list "-tnull" local))))
-;     (add-to-list 'flymake-err-line-patterns
-;                  '("\\(.*?\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3))
-;     (add-to-list 'flymake-err-line-patterns
-;                  '("\\(^No top level modules\\)$" nil nil nil 0))
-;     (add-to-list 'flymake-err-line-patterns
-;                  '("\\(Unknown module type\\)" nil nil nil 0))
-;     (push '("\\.[v]\\'" flymake-verilog-init) flymake-allowed-file-name-masks)))
+;  (defun flymake-verilog-init ()
+;    (let* ((temp (flymake-init-create-temp-buffer-copy 'flymake-create-temp-inplace))
+;           (local (file-relative-name temp (file-name-directory buffer-file-name))))
+;      (list "iverilog" (list "-tnull" local))))
+;  (add-to-list 'flymake-err-line-patterns
+;               '("\\(.*?\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3))
+;  (add-to-list 'flymake-err-line-patterns
+;               '("\\(^No top level modules\\)$" nil nil nil 0))
+;  (add-to-list 'flymake-err-line-patterns
+;               '("\\(Unknown module type\\)" nil nil nil 0))
+;  (push '("\\.[v]\\'" flymake-verilog-init) flymake-allowed-file-name-masks))

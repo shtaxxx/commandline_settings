@@ -14,6 +14,14 @@
 (set-face-background 'region "LightSteelBlue1")
 
 (cond
+ ((string-match "your-machine-name*" hostname)
+  (setq initial-frame-alist '((width . 198) (height . 52) (top . 0) (left . 0)))
+  (create-fontset-from-ascii-font "Monaco-14:weight=normal:slant=normal" nil "monacoosaka")
+  (set-fontset-font "fontset-monacoosaka"
+                    'unicode
+                    (font-spec :family "Osaka" :size 16)
+                    nil
+                    'append))
  (t ;; default
   (create-fontset-from-ascii-font "Monaco-14:weight=normal:slant=normal" nil "monacoosaka")
   (set-fontset-font "fontset-monacoosaka"
@@ -51,3 +59,6 @@
 ;; Input method
 (mac-add-key-passed-to-system 'shift)
 (setq default-input-method "MacOSX")
+
+;; Full Screen
+(global-set-key [C-s-268632070] 'toggle-frame-fullscreen)

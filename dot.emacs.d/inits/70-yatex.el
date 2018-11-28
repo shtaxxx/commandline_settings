@@ -9,8 +9,7 @@
 ;      bibtex-command "pbibtex --kanji=utf8"
 ;      dvi2-command "open -a Preview")
 
-(add-hook 'yatex-mode-load-hook
-          (function
-           (lambda ()
-             (YaTeX-define-begend-key "ba" "align"))))
-(add-hook 'yatex-mode-hook'(lambda ()(setq auto-fill-function nil)))
+(defun my-yatex-mode-load-hook ()
+  (YaTeX-define-begend-key "ba" "align")
+  (setq auto-fill-function nil))
+(add-hook 'yatex-mode-load-hook 'my-yatex-mode-load-hook)

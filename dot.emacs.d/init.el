@@ -58,6 +58,7 @@
                   cuda-mode
                   opencl-mode
                   scala-mode
+                  lua-mode
                   jinja2-mode
                   markdown-mode
                   yatex

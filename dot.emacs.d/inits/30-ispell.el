@@ -19,7 +19,7 @@
 
 ;; Use latex file
 (setq ispell-filter-hook-args '("-w"))
-(setq TeX-mode-hook
-      (function
-       (lambda ()
-         (setq ispell-filter-hook "detex"))))
+
+(defun my-TeX-mode-hook ()
+  (setq ispell-filter-hook "detex"))
+(setq TeX-mode-hook 'my-TeX-mode-hook)

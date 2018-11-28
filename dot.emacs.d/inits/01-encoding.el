@@ -3,4 +3,4 @@
 (set-keyboard-coding-system 'utf-8)
 (set-buffer-file-coding-system 'utf-8)
 (set-clipboard-coding-system 'utf-8)
-(setq default-buffer-file-coding-system 'utf-8)
+(set-default 'buffer-file-coding-system 'utf-8)
