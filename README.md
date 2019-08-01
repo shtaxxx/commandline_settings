@@ -13,7 +13,7 @@ What's This?
 
 This is a setup toolkit for Mac and Linux command-line environments. The toolkit includes
 
-- shell settings: .bash_profile and .bashrc
+- shell settings: (for bash) .bash_profile and .bashrc, (for zsh) .zprofile and .zshrc
 - screen settings: .screenrc
 - emacs settings: .emacs.d
 - vim settings: .vimrc
@@ -23,13 +23,15 @@ This is a setup toolkit for Mac and Linux command-line environments. The toolkit
 Procedure
 ================================================================================
 
-Backup old setting files
+Backup old setting files (if needed)
 ----------------------------------------
 
 If there are any old settings files, such as .bashrc and .bash_profile, please rename or delete them.
 
     mv .bash_profile .bash_profile.old
     mv .bashrc .bashrc.old
+    mv .zprofile .zprofile.old
+    mv .zshrc .zshrc.old
     mv .emacs.d .emacs.d.old
     mv .vimrc .vimrc.old
 
