@@ -88,5 +88,5 @@ Then set the permission of .ssh/id_rsa to 600
 Option: How to update this repository to latest version
 ----------------------------------------
 
-    cd .setting
+    cd .dotfiles
     git pull
