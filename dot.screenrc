@@ -1,7 +1,7 @@
 startup_message off
 
 ## current command name as window name
-shelltitle "$ |bash"
+shelltitle "$ |zsh"
 
 #hardstatus alwayslastline "%-w%{= ck}%n %t%{-}%+w %=%H [%Y-%m-%d %02c:%s]"
 hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y %m/%d %C:%s%a"
