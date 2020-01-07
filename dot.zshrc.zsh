@@ -72,7 +72,7 @@ export EDITOR='vi'
 export SVN_SSH='ssh -q'
 
 # OS-dependent settings
-if [ "$(uname)" == 'Darwin' ]; then
+if [ "$(uname)" = 'Darwin' ]; then
     export LSCOLORS=gxfxcxdxbxegedabagacad
     alias ls='ls -G'
 
@@ -84,7 +84,7 @@ if [ "$(uname)" == 'Darwin' ]; then
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
     alias gtkwave-app='open -a /Applications/gtkwave.app'
     
-elif [ "$(uname)" == 'Linux' ]; then
+elif [ "$(uname)" = 'Linux' ]; then
     alias ls='ls --color=auto -NF --show-control-chars'
 
     # ssh-agent
