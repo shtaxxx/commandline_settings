@@ -61,4 +61,4 @@
 (setq default-input-method "MacOSX")
 
 ;; Full Screen
-(global-set-key [C-s-268632070] 'toggle-frame-fullscreen)
+(global-set-key (kbd "C-s-f") 'toggle-frame-fullscreen)
