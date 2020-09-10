@@ -1,8 +1,12 @@
-;; load-path
-(defun prepend-path ( my-path )
+;; load-path functions
+(defun prepend-path (my-path)
   (setq load-path (cons (expand-file-name my-path) load-path)))
-(defun append-path ( my-path )
+(defun append-path (my-path)
   (setq load-path (append load-path (list (expand-file-name my-path)))))
+
+;; default directory
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
 
 ;; for emacs 24 and later
 (cond
@@ -20,9 +24,9 @@
   (load custom-file))
 
 ;; package
-(require 'cl)
+(require 'cl-lib)
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
 ;; packages for emacs 23 and older
@@ -64,10 +68,10 @@
                   yatex
                   ))))
 
-;; automatic install 
-(let ((not-installed (loop for x in installing-package-list
-                           when (not (package-installed-p x))
-                           collect x)))
+;; automatic install
+(let ((not-installed (cl-loop for x in installing-package-list
+                              when (not (package-installed-p x))
+                              collect x)))
   (when not-installed
     (package-refresh-contents)
     (dolist (pkg not-installed)
