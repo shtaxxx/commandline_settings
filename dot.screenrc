@@ -3,14 +3,23 @@ startup_message off
 ## current command name as window name
 shelltitle "$ |zsh"
 
+altscreen on
+defbce on
+term screen-256color
+#term xterm-256color
+
+termcap * 'G0:S0=\E(%.:E0=\E(B:TY=iso2022'
+termcapinfo xterm* ti@:te@
+
 #hardstatus alwayslastline "%-w%{= ck}%n %t%{-}%+w %=%H [%Y-%m-%d %02c:%s]"
-hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y %m/%d %C:%s%a"
+#hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y}%Y/%m/%d %D %c:%s"
+#hardstatus alwayslastline "%{.cW} %-w%{= dW} %n %t* %{-}%+w %=%{..W} %H %{..Y}%Y/%m/%d %D %c:%s"
+hardstatus alwayslastline "%{.KW} %-w%{.cW} %n %t* %{-}%+w %=%{..C} %H %{..Y}%Y/%m/%d %D %c:%s"
+
 hardstatus off
 
 escape ^z^z
 
-termcap * 'G0:S0=\E(%.:E0=\E(B:TY=iso2022'
-termcapinfo xterm* ti@:te@
 autodetach on
 defflow off
 crlf off
@@ -26,6 +35,7 @@ bind o focus
 bind k kill
 bind s split
 
-defscrollback 1000000
+#defscrollback 1000000
+defscrollback 100000
 screen 1
 screen 0
