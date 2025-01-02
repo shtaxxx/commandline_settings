@@ -1,8 +1,0 @@
-(defun my-rust-mode-hook ()
-  (when (executable-find "racer")
-    (make-local-variable 'ac-stop-words)
-    (add-to-list 'ac-stop-words "")
-    (ac-racer-setup))
-  (when (executable-find "rustfmt")
-    (setq rust-format-on-save t)))
-(add-hook 'rust-mode-hook 'my-rust-mode-hook)
