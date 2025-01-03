@@ -107,7 +107,7 @@
   :config
   (reformatter-define ruff-format
                       :program "ruff"
-                      :args `("format" "--stdin-filename" ,buffer-file-name "-")))
+                      :args `("format" "--stdin-filename", buffer-file-name "-")))
 
 ;; jedi
 ;(setq jedi:setup-keys t)
