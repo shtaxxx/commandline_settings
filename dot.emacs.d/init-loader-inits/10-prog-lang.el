@@ -15,6 +15,7 @@
   ;:init
   ;(global-company-mode)
   :hook
+  (emacs-lisp-mode . company-mode)
   (lisp-interaction-mode . company-mode)
   (c-mode-common . company-mode)
   (python-mode . company-mode)
@@ -33,6 +34,7 @@
   :ensure t
   :hook
   ;(after-init . global-flycheck-mode)
+  (emacs-lisp-mode . flycheck-mode)
   (lisp-interaction-mode . flycheck-mode)
   (c-mode-common . flycheck-mode)
   (python-mode . flycheck-mode)
@@ -96,7 +98,7 @@
   (setq python-indent 4)
   (setq tab-width 4))
 
-;; ruff-format
+;; ruff-format (python)
 (use-package ruff-format
   :ensure t)
 
@@ -125,3 +127,12 @@
 ;  ;; autopep8
 ;  (setq py-autopep8-options '("--ignore=E402" "--max-line-length=100")))
 ;(add-hook 'python-mode-hook 'my-python-mode-hook)
+
+;; rust-mode
+(use-package rust-mode
+  :ensure t
+  :custom rust-format-on-save t)
+
+(use-package cargo
+  :ensure t
+  :hook (rust-mode . cargo-minor-mode))
