@@ -18,6 +18,7 @@
   (emacs-lisp-mode . company-mode)
   (lisp-interaction-mode . company-mode)
   (c-mode-common . company-mode)
+  (verilog-mode . company-mode)
   (python-mode . company-mode)
   (rust-mode . company-mode)
   :config
@@ -37,6 +38,7 @@
   (emacs-lisp-mode . flycheck-mode)
   (lisp-interaction-mode . flycheck-mode)
   (c-mode-common . flycheck-mode)
+  (verilog-mode . flycheck-mode)
   (python-mode . flycheck-mode)
   (rust-mode . flycheck-mode)
 )
@@ -68,7 +70,7 @@
 ;; verilog
 (use-package verilog-mode
   :ensure t
-  :mode ("\\.v\\'" "\\.vh\\'")
+  :mode ("\\.v\\'" "\\.sv\\'" "\\.vh\\'" "\\.svh\\'")
   :config
   (setq
    ;verilog-auto-lineup              '(all)
